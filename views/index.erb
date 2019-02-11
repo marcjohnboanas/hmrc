@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title></title>
+<meta charset="utf-8">
+<meta name="description" content="">
+<meta name="author" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="">
+<link rel="shortcut icon" href="">
+<style>
+  span.highlight{
+    background: yellow;
+    font-weight: bold;
+  }
+  .terminal {
+    background: #000;
+    color: lightgreen;
+    padding: 10px;
+    border-radius: 5px;
+    line-height: 18px;
+  }
+</style>
+</head>
+<body>
+
+<h2>OAuthSwift</h2>
+
+You can set callback url : 
+
+<br><br>
+
+<span class="highlight">https://oauthswift.herokuapp.com/callback/{app_name}</span>
+
+<br><br>
+
+Redirect to <span class="highlight">"oauth-swift://oauth-callback/{app_name}"</span>
+
+<pre class="terminal">
+$ curl -i https://oauthswift.herokuapp.com/callback/app_name
+HTTP/1.1 302 Found 
+Connection: keep-alive
+Content-Type: text/html;charset=utf-8
+Location: oauth-swift://oauth-callback/app_name?
+Content-Length: 0
+X-Xss-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+Server: WEBrick/1.4.2 (Ruby/2.5.0/2017-12-25)
+Date: Sat, 24 Mar 2018 05:41:01 GMT
+Via: 1.1 vegur
+</pre>
+
+</body>
+
+</html>
